@@ -83,7 +83,7 @@ WSGI_APPLICATION = 'api.wsgi.application'
 DATABASES = {
     'default': {
     'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'karkascentr',
+        'NAME': 'newdb',
         'USER': 'root',
         'PASSWORD': root,
         'HOST': 'localhost',
