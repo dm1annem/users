@@ -10,7 +10,9 @@ class UserSerialiser(serializers.ModelSerializer):
             'password': {'write_only': True}
         }
 
+
     def create(self, validated_data):
+        # Хешируем пароль и делаем чтоб он не возвращался на клиент
         password = validated_data.pop('password', None)
         instance = self.Meta.model(**validated_data)
         if password is not None:

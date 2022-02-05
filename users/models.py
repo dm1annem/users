@@ -1,7 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import AbstractUser
 
-# Create your models here.
+# Расширяем Пользователя своими настройками
 class User(AbstractUser):
     name = models.CharField('Имя', max_length=50, blank=True)
     email = models.EmailField('Почта', unique=True, max_length=255,)
